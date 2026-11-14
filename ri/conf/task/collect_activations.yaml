@@ -1,0 +1,15 @@
+name: collect_activations
+# "band" is the late band of the loaded model; an explicit list is validated against
+# the model's depth. Every layer must be present in the patch sweep's combined parquet.
+layers: band
+# Must equal the patch sweep's max_gen_len, so that the regenerated CoT matches.
+max_gen_len: 400
+# A local directory; null uses $HS_CACHE_DIR, or hs_cache when it is unset.
+hs_cache_dir: null
+extraction_mode: flexible
+sample_start: null
+sample_end: null
+# Require the sweep's trace hashes and check them against the regenerated CoT.
+strict_trace: true
+# Skip questions whose file already holds every layer with matching metadata and labels.
+resume: true

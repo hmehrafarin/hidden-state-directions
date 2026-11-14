@@ -1,0 +1,4 @@
+name: bbh_object_counting
+cot_prompt_template: bbh_numeric_cot
+direct_prompt_template: bbh_numeric_direct
+answer_type: numeric

@@ -1,0 +1,4 @@
+name: bbh_boolean_expressions
+cot_prompt_template: bbh_boolean_cot
+direct_prompt_template: bbh_boolean_direct
+answer_type: boolean

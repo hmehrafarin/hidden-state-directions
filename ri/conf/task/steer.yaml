@@ -1,0 +1,18 @@
+name: steer
+# The rotation towards the recovering mean, applied at the last prompt position
+# and at every generated token.
+direction: recovering_mean
+operator: rotate
+every_token: true
+# null: [0.25, 0.5, 1.0].
+doses: null
+# 0-indexed block; null is the middle layer of the model's late band.
+layer: null
+# null: generate without intervention too.
+include_baseline: null
+max_gen_len: 128
+extraction_mode: flexible
+sample_start: null
+sample_end: null
+# Skip (question, dose) cells already stored; false generates them again and replaces them.
+resume: true

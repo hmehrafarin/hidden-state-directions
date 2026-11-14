@@ -1,0 +1,4 @@
+name: bbh_navigate
+cot_prompt_template: bbh_yesno_cot
+direct_prompt_template: bbh_yesno_direct
+answer_type: boolean

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it using the metadata below."
+title: "Pointed in the Right Direction: Hidden-State Directions Outperform Chain-of-Thought"
+type: software
+authors:
+  - family-names: Mehrafarin
+    given-names: Houman
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/hmehrafarin/hidden-state-directions"
+keywords:
+  - interpretability
+  - activation-patching
+  - linear-probing
+  - hidden-states
+  - chain-of-thought
+  - large-language-models

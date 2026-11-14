@@ -1,0 +1,7 @@
+name: probe
+# A layer of the model's late band (0-indexed), or "band" for all three in turn.
+layer: band
+# auto: CUDA when available, otherwise CPU.
+device: auto
+# true skips the layers whose results exist; false refuses to start when any does.
+skip_existing: false

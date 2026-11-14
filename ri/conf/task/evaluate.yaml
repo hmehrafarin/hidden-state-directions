@@ -1,0 +1,6 @@
+name: evaluate
+# cot or direct; selects the dataset's cot_prompt_template or direct_prompt_template.
+prompt: cot
+batch_size: 1
+max_gen_len: 1024
+extraction_mode: flexible

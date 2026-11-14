@@ -1,0 +1,25 @@
+name: intervene
+# recovering_mean | failed_mean | contrastive | task_level
+direction: recovering_mean
+# Weight of the failed mean in the contrastive and task-level directions.
+lambda_: 0.5
+# rotate: SLERP towards the target by the fraction `dose`, norm preserved.
+# scale: replace the state with `dose` times the target.
+operator: rotate
+every_token: false
+# null: [0.25, 0.5, 0.75, 1.0, 1.25] for rotate, [0.25, 0.5, 1.0, 2.0, 4.0] for scale,
+# [1.0] for a cross-task run.
+doses: null
+# 0-indexed block; null is the middle layer of the model's late band.
+layer: null
+# Apply the task-level direction d_T(0.5) of this task instead of the dataset's own
+# (requires direction=task_level, lambda_=0.5, operator=rotate).
+source_dataset: null
+# null: generate without intervention too, except in a cross-task run.
+include_baseline: null
+max_gen_len: 128
+extraction_mode: flexible
+sample_start: null
+sample_end: null
+# Skip (question, dose) cells already stored; false generates them again and replaces them.
+resume: true

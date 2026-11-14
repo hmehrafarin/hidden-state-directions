@@ -1,0 +1,4 @@
+name: directions
+# "band" (the model's late band) or an explicit list of 0-indexed layers.
+layers: band
+overwrite: false

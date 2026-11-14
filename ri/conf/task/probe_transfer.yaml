@@ -1,0 +1,7 @@
+name: probe_transfer
+# "band" or an explicit list of layers; every task needs a finished probe at each layer.
+layers: band
+# auto: CUDA when available, otherwise CPU.
+device: auto
+# true skips the layers whose results exist; false refuses to start when any does.
+skip_existing: false

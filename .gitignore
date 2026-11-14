@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+*.whl
+.venv/
+.venv*/
+
+# Tool caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.uv-cache/
+.cache/
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
+
+# Hydra run directories
+outputs/
+multirun/
+
+# Experiment outputs ($RI_RESULTS_ROOT, $HS_CACHE_DIR defaults, the README's report directory)
+results/
+hs_cache/
+paper_tables/
+
+# Tracking
+wandb/

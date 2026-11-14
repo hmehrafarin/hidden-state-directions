@@ -1,0 +1,48 @@
+# Prompt templates are kept byte-identical to the ones the results were produced with.
+exclude: ^ri/prompts/templates/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: check-merge-conflict
+      - id: debug-statements
+
+  # The linters run inside the project environment, at the versions pinned in the dev
+  # group, so the hooks, CI and a plain `uv run ruff` agree; mypy and deptry also need
+  # the real dependency types.
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        entry: uv run --quiet ruff check --fix --force-exclude
+        language: system
+        types_or: [python, pyi]
+      - id: ruff-format
+        name: ruff-format
+        entry: uv run --quiet ruff format --force-exclude
+        language: system
+        types_or: [python, pyi]
+      - id: codespell
+        name: codespell
+        entry: uv run --quiet codespell
+        language: system
+        types: [text]
+      - id: mypy
+        name: mypy
+        entry: uv run --quiet mypy --config-file=pyproject.toml ri
+        language: system
+        pass_filenames: false
+        files: ^ri/.*\.py$
+      - id: deptry
+        name: deptry
+        entry: uv run --quiet deptry .
+        language: system
+        pass_filenames: false
+        always_run: true

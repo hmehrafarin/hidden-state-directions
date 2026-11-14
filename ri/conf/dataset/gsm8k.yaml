@@ -1,0 +1,4 @@
+name: gsm8k
+cot_prompt_template: gsm8k_cot
+direct_prompt_template: gsm8k_direct
+answer_type: numeric

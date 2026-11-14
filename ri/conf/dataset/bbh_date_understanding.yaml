@@ -1,0 +1,4 @@
+name: bbh_date_understanding
+cot_prompt_template: bbh_mc_cot
+direct_prompt_template: bbh_mc_direct
+answer_type: multiple_choice

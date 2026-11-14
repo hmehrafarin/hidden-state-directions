@@ -1,0 +1,6 @@
+name: report
+# HuggingFace ids or model config names (llama_8b, qwen_7b); null uses the run's model.
+models: null
+# null writes each model's tables to results/<model>/analysis/; a directory collects the
+# tables of all models there, concatenated.
+output_dir: null

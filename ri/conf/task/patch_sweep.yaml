@@ -1,0 +1,14 @@
+name: patch_sweep
+# "band" is the late band of the loaded model; an explicit list such as [26, 28, 30]
+# is validated against the model's depth.
+layers: band
+max_gen_len: 400
+# Cached CoT token ids, shared by all layers and jobs; null uses
+# results/<model>/patch_sweep/generation_cache.
+gen_cache_dir: null
+extraction_mode: flexible
+# Half-open [sample_start, sample_end) range of questions; null is unbounded.
+sample_start: null
+sample_end: null
+# Skip (question, layer) pairs already complete in the combined parquet.
+resume: false

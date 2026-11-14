@@ -1,0 +1,4 @@
+name: strategyqa
+cot_prompt_template: strategyqa_cot
+direct_prompt_template: strategyqa_direct
+answer_type: boolean
