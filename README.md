@@ -1,7 +1,7 @@
-# Pointed in the Right Direction: Hidden-State Directions Outperform Chain-of-Thought
+# Chain-of-Thought Hidden States Reveal Task-Solving Directions for Direct Answers
 
-Code for the paper *Pointed in the Right Direction: Hidden-State Directions Outperform
-Chain-of-Thought*. The paper shows that changing one hidden state of a model prompted to answer
+Code for the paper *Chain-of-Thought Hidden States Reveal Task-Solving Directions for Direct
+Answers*. The paper shows that changing one hidden state of a model prompted to answer
 directly makes it answer with much shorter generations than chain-of-thought (CoT) prompting and,
 on average, more accurately. Each hidden state of a question's CoT is labelled **recovering** if
 patching it into the last position of the direct prompt yields the correct answer and **failed**

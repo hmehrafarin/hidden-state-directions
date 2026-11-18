@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite it using the metadata below."
-title: "Pointed in the Right Direction: Hidden-State Directions Outperform Chain-of-Thought"
+title: "Chain-of-Thought Hidden States Reveal Task-Solving Directions for Direct Answers"
 type: software
 authors:
   - family-names: Mehrafarin

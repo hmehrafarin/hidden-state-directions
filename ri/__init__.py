@@ -1,1 +1,1 @@
-"""Hidden-state directions that outperform chain-of-thought prompting."""
+"""Task-solving directions built from chain-of-thought hidden states."""
